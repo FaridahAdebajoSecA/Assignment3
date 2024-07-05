@@ -1,0 +1,210 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://img.freepik.com/premium-vector/startup-elements-hand-drawn-doodle-seamless-pattern_264223-760.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background-color: rgba(106, 13, 173, 0.8);
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    margin: 20px;
+    width: 90%;
+    max-width: 1200px; /* Increased max-width for larger quiz section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px; /* Reduced padding for better layout */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 100%; /* Make section take full width */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+form label {
+    display: block;
+    margin: 15px 0 5px; /* Adjusted margins */
+    font-weight: bold;
+    color: #6a0dad;
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
+}
+
+form button {
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    transform: translateY(-2px);
+}
+
+.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#quiz-form .question {
+    margin-bottom: 15px;
+}
+
+#question-container {
+    font-size: 18px; /* Increased font size for better readability */
+    line-height: 1.5;
+}
+
+#next-question {
+    display: none;
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#next-question:hover {
+    background-color: #5c0dac;
+    transform: translateY(-2px);
+}
+
+#score {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#restart-quiz {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#restart-quiz:hover {
+    background-color: #ff6347;
+    transform: translateY(-2px);
+}
+
+#progress-bar-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.5s ease;
+}
+
+#timer {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+
+
+#result {
+    text-align: center;
+}
+
+#restart-quiz {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    #progress-bar-container {
+        width: 90%;
+    }
+}
